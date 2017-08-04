@@ -32,8 +32,9 @@ do
     fi
 done
 
-echo "Installing Node 8"
-nvm install 8
+echo "Installing and setting latest version of Node"
+nvm install node
+nvm use node
 
 echo "Cleaning up..."
 brew cleanup
