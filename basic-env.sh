@@ -32,9 +32,6 @@ CASKS=(
 echo "Installing cask apps..."
 brew cask install ${CASKS[@]}
 
-echo "Installing global npm packages..."
-npm install marked -g
-
 echo "Configuring OSX..."
 
 # Set fast key repeat rate
