@@ -12,7 +12,6 @@ fi
 brew update
 
 PACKAGES=(
-    emacs
     git
     nvm
     mongodb
@@ -45,7 +44,6 @@ brew install cask
 CASKS=(
     tunnelblick
     google-chrome
-    google-hangouts
     iterm2
     slack
     sourcetree
