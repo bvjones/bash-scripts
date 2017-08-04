@@ -9,6 +9,7 @@ To run the shell scripts you will need to do the following -
 
 ## Basic-env includes
 
+# Installs
 - citrix-receiver 
 - firefox
 - tunnelblick

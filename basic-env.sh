@@ -7,7 +7,7 @@ if test ! $(which brew); then
     echo "Installing homebrew..."
     ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
-
+set -x
 # Update homebrew recipes
 brew update
 
@@ -50,5 +50,6 @@ defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 
 # Disable "natural" scroll
 defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
+set +x
 
 echo "Bootstrapping complete"

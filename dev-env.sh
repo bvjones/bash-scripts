@@ -22,6 +22,7 @@ PACKAGES=(
 )
 
 echo "Installing packages..."
+echo "this might take a while, please wait..."
 brew install ${PACKAGES[@]}
 
 echo "Cleaning up..."
@@ -48,7 +49,7 @@ CASKS=(
 )
 
 echo "Installing cask apps..."
-echo "This might take a while please wait"
+echo "this might take a while, please wait..."
 brew cask install ${CASKS[@]}
 
 echo "Starting mongodb"
@@ -83,6 +84,6 @@ defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
 
 echo "Creating folder structure..."
 [[ ! -d Wiki ]] && mkdir Wiki
-[[ ! -d Workspace ]] && mkdir Workspace
+[[ ! -d CTM ]] && mkdir CTM
 
 echo "Bootstrapping complete"
