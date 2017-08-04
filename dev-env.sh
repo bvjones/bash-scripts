@@ -57,11 +57,11 @@ brew services start mongodb
 echo "Restarting mongodb"
 brew services restart mongodb
 
-echo "Installing global npm packages..."
-npm install marked -g
-
 echo "Installing Node 8"
 nvm install 8
+
+echo "Installing global npm packages..."
+npm install marked -g
 
 echo "Configuring OSX..."
 # Set fast key repeat rate
