@@ -19,22 +19,18 @@ PACKAGES=(
     mas
     wget
 )
-
+echo $PATH
 echo "Installing packages..."
 echo "this might take a while, please wait..."
 for i in "${PACKAGES[@]}"
 do
    if brew ls --versions $i > /dev/null; then
-    brew update
+    brew update 
     brew upgrade $i
     else
     brew install $i
     fi
 done
-
-echo "Installing and setting latest version of Node"
-nvm install node
-nvm use node
 
 echo "Cleaning up..."
 brew cleanup
@@ -43,6 +39,7 @@ echo "Installing cask..."
 brew install cask
 
 CASKS=(
+    firefox
     tunnelblick
     google-chrome
     iterm2
@@ -65,7 +62,7 @@ do
     fi
 done
 
-# echo brew cask install ${CASKS[@]}
+source ~/.profile
 
 echo "Starting mongodb"
 brew services start mongodb
