@@ -27,7 +27,7 @@ echo "Cleaning up..."
 brew cleanup
 
 echo "Installing cask..."
-brew install caskroom/cask/brew-cask
+brew install caskroom/cask
 
 CASKS=(
     atom
@@ -39,7 +39,6 @@ CASKS=(
     microsoft-lync
     gpgtools
     iterm2
-    skype
     slack
     sourcetree
     spectacle
@@ -48,6 +47,7 @@ CASKS=(
 )
 
 echo "Installing cask apps..."
+echo "This might take a while please wait"
 brew cask install ${CASKS[@]}
 
 echo "Starting mongodb"

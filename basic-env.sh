@@ -22,14 +22,14 @@ CASKS=(
     google-drive
     google-hangouts
     microsoft-lync
-    microsoft-office
-    gpgtools
     skype
     slack
     spectacle
 )
 
 echo "Installing cask apps..."
+echo "This might take a while please wait"
+echo -ne
 brew cask install ${CASKS[@]}
 
 echo "Configuring OSX..."
