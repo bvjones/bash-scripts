@@ -7,9 +7,10 @@ To run the shell scripts you will need to do the following -
 - `chmod +x ./basic-env.sh ./dev-env.sh`
 - `./basic-env.sh` or `./dev-env.sh`
 
-## Basic-env includes
+# Basic-env includes
 
-# Installs
+## Installs
+### Casks
 - citrix-receiver 
 - firefox
 - tunnelblick
@@ -20,3 +21,23 @@ To run the shell scripts you will need to do the following -
 - skype
 - slack
 - spectacle
+
+# Dev-env includes
+
+## Installs
+### Packages
+- git
+- nvm
+- mongodb
+- docker
+- mas
+- wget
+
+### Casks
+- tunnelblick
+- google-chrome
+- iterm2
+- screenhero
+- slack
+- spectacle
+- visual-studio-code
