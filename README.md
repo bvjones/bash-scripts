@@ -6,3 +6,16 @@ To run the shell scripts you will need to do the following -
 - `sudo chown -R "$USER":admin /Library/Caches/Homebrew`
 - `chmod +x ./basic-env.sh ./dev-env.sh`
 - `./basic-env.sh` or `./dev-env.sh`
+
+## Basic-env includes
+
+- citrix-receiver 
+- firefox
+- tunnelblick
+- google-chrome
+- google-drive
+- google-hangouts
+- microsoft-lync
+- skype
+- slack
+- spectacle

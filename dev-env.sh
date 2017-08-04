@@ -18,6 +18,7 @@ PACKAGES=(
     docker
     mas
     wget
+    npm
 )
 
 echo "Installing packages..."
