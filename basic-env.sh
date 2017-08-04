@@ -7,7 +7,6 @@ if test ! $(which brew); then
     echo "Installing homebrew..."
     ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
-set -x
 # Update homebrew recipes
 brew update
 
@@ -27,8 +26,15 @@ CASKS=(
 
 echo "Installing cask apps..."
 echo "This might take a while please wait"
-echo -ne
-brew cask install ${CASKS[@]}
+for i in "${CASKS[@]}"
+do
+   if brew cask ls --versions $i > /dev/null; then
+    brew update
+    brew cask upgrade $i
+    else
+    brew cask install $i
+    fi
+done
 
 echo "Configuring OSX..."
 
@@ -48,6 +54,4 @@ defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 
 # Disable "natural" scroll
 defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
-set +x
-
 echo "Bootstrapping complete"
