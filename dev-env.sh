@@ -12,8 +12,9 @@ fi
 brew update
 
 PACKAGES=(
+    emacs
     git
-    nvmx
+    nvm
     mongodb
     docker
     mas
@@ -22,7 +23,15 @@ PACKAGES=(
 
 echo "Installing packages..."
 echo "this might take a while, please wait..."
-brew install ${PACKAGES[@]}
+for i in "${PACKAGES[@]}"
+do
+   if brew ls --versions $i > /dev/null; then
+    brew update
+    brew upgrade $i
+    else
+    brew install $i
+    fi
+done
 
 echo "Installing Node 8"
 nvm install 8
@@ -31,17 +40,12 @@ echo "Cleaning up..."
 brew cleanup
 
 echo "Installing cask..."
-brew install caskroom/cask
+brew install cask
 
 CASKS=(
-    atom
-    firefox
     tunnelblick
     google-chrome
-    google-drive
     google-hangouts
-    microsoft-lync
-    gpgtools
     iterm2
     slack
     sourcetree
@@ -52,7 +56,17 @@ CASKS=(
 
 echo "Installing cask apps..."
 echo "this might take a while, please wait..."
-brew cask install ${CASKS[@]} --verbose 
+for i in "${CASKS[@]}"
+do
+   if brew cask ls --versions $i > /dev/null; then
+    brew update
+    brew cask upgrade $i
+    else
+    brew cask install $i
+    fi
+done
+
+# echo brew cask install ${CASKS[@]}
 
 echo "Starting mongodb"
 brew services start mongodb

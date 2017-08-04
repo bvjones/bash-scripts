@@ -16,10 +16,8 @@ brew install caskroom/cask/brew-cask
 
 CASKS=(
     citrix-receiver 
-    firefox
     tunnelblick
     google-chrome
-    google-drive
     google-hangouts
     microsoft-lync
     skype
