@@ -13,7 +13,7 @@ brew update
 
 PACKAGES=(
     git
-    nvm
+    nvmx
     mongodb
     docker
     mas
@@ -52,7 +52,7 @@ CASKS=(
 
 echo "Installing cask apps..."
 echo "this might take a while, please wait..."
-brew cask install ${CASKS[@]}
+brew cask install ${CASKS[@]} --verbose 
 
 echo "Starting mongodb"
 brew services start mongodb
