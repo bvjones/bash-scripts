@@ -24,6 +24,9 @@ echo "Installing packages..."
 echo "this might take a while, please wait..."
 brew install ${PACKAGES[@]}
 
+echo "Installing Node 8"
+nvm install 8
+
 echo "Cleaning up..."
 brew cleanup
 
@@ -56,9 +59,6 @@ brew services start mongodb
 
 echo "Restarting mongodb"
 brew services restart mongodb
-
-echo "Installing Node 8"
-nvm install 8
 
 echo "Installing global npm packages..."
 npm install marked -g
