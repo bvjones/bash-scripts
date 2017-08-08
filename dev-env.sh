@@ -25,7 +25,7 @@ echo "this might take a while, please wait..."
 for i in "${PACKAGES[@]}"
 do
    if brew ls --versions $i > /dev/null; then
-    brew update 
+    brew update
     brew upgrade $i
     else
     brew install $i
@@ -34,6 +34,23 @@ done
 
 echo "Cleaning up..."
 brew cleanup
+
+echo "Would you like to install Xcode (Y/N)?"
+read XCODEMAYBE
+# Convert to uppercase
+XCODEMAYBE=$(echo $XCODEMAYBE | tr 'a-z' 'A-Z')
+# If valid response..
+if [ "${XCODEMAYBE}" = "Y" ]; then
+    mas signout
+    # Get Apple ID
+    echo "What's your Apple ID?"
+    read APPLEID
+    # Install Xcode
+    if mas signin --dialog "$APPLEID"; then
+        echo "Installing Xcode..."
+        mas install 497799835
+    fi
+fi
 
 echo "Installing cask..."
 brew install cask
