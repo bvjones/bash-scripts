@@ -18,8 +18,8 @@ PACKAGES=(
     docker
     mas
     wget
+    node
 )
-echo $PATH
 echo "Installing packages..."
 echo "this might take a while, please wait..."
 for i in "${PACKAGES[@]}"
@@ -62,15 +62,10 @@ do
     fi
 done
 
-source ~/.profile
-
 echo "Starting mongodb"
 brew services start mongodb
 
 echo "Restarting mongodb"
 brew services restart mongodb
-
-echo "Installing global npm packages..."
-npm install marked -g
 
 echo "Bootstrapping complete"
