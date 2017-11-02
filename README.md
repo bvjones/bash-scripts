@@ -1,5 +1,5 @@
 To run the shell scripts you will need to do the following -
-
+- Add you SSH key to github
 - `git clone git@github.com:bvjones/bash-scripts.git && cd bash-scripts`
 - `sudo chown -R "$USER":admin /usr/local`
 - `mkdir /Library/Caches/Homebrew`
