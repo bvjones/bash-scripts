@@ -44,9 +44,7 @@ CASKS=(
     google-chrome
     iterm2
     slack
-    sourcetree
     spectacle
-    screenhero
     visual-studio-code
 )
 
