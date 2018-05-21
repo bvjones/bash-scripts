@@ -32,6 +32,7 @@ To run the shell scripts you will need to do the following -
 - docker
 - mas
 - wget
+- Pullp
 
 ### Casks
 - tunnelblick

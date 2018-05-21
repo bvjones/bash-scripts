@@ -60,6 +60,10 @@ do
     fi
 done
 
+echo "Installing Pullp"
+cd ..
+git clone https://github.com/rkclark/pullp.git Pullp
+
 echo "Starting mongodb"
 brew services start mongodb
 
