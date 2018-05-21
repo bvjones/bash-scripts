@@ -66,7 +66,7 @@ To run the shell scripts you will need to do the following -
 - docker
 - mas
 - wget
-- (Pullp) ([https://github.com/rkclark/pullp])
+- (Pullp) [https://github.com/rkclark/pullp]
 
 ### Casks
 - tunnelblick
