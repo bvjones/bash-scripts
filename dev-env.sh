@@ -19,6 +19,7 @@ PACKAGES=(
     mas
     wget
     node
+    docker
 )
 echo "Installing packages..."
 echo "this might take a while, please wait..."
