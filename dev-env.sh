@@ -48,7 +48,6 @@ CASKS=(
     visual-studio-code
     lastpass
     authy
-    nvm
 )
 
 echo "Installing cask apps..."
@@ -69,6 +68,9 @@ git clone https://github.com/rkclark/pullp.git Pullp
 
 echo "Installing oh my zsh"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+echo "Installing nvm"
+sh -c $(curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash)
 
 echo "Starting mongodb"
 brew services start mongodb
