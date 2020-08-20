@@ -39,13 +39,14 @@ echo "Installing cask..."
 brew install cask
 
 CASKS=(
-    firefox
     tunnelblick
     google-chrome
     iterm2
     slack
     spectacle
     visual-studio-code
+    lastpass
+    authy
 )
 
 echo "Installing cask apps..."
